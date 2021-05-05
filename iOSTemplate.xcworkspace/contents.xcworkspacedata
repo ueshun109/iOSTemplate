@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BuildTools">
+   </FileRef>
+   <FileRef
       location = "group:App/Staging.xcodeproj">
    </FileRef>
    <FileRef

@@ -12,6 +12,7 @@
 		F4916F30263FD20500D07B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4916F2F263FD20500D07B94 /* Assets.xcassets */; };
 		F4916F33263FD20500D07B94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4916F32263FD20500D07B94 /* Preview Assets.xcassets */; };
 		F4916F69264022A100D07B94 /* Sample1 in Frameworks */ = {isa = PBXBuildFile; productRef = F4916F68264022A100D07B94 /* Sample1 */; };
+		F4916FB62643A0DF00D07B94 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F4916FB52643A0DF00D07B94 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F4916F2F263FD20500D07B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4916F32263FD20500D07B94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4916F34263FD20500D07B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4916FB52643A0DF00D07B94 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		F4916F1F263FD20300D07B94 = {
 			isa = PBXGroup;
 			children = (
+				F4916FB52643A0DF00D07B94 /* Settings.bundle */,
 				F4916F2A263FD20300D07B94 /* iOS */,
 				F4916F29263FD20300D07B94 /* Products */,
 				F4916F67264022A100D07B94 /* Frameworks */,
@@ -90,6 +93,7 @@
 				F4916F25263FD20300D07B94 /* Frameworks */,
 				F4916F26263FD20300D07B94 /* Resources */,
 				F4916F7D2642671700D07B94 /* Run Swiftlint */,
+				F4916FBB2643A71500D07B94 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -141,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4916F33263FD20500D07B94 /* Preview Assets.xcassets in Resources */,
+				F4916FB62643A0DF00D07B94 /* Settings.bundle in Resources */,
 				F4916F30263FD20500D07B94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,8 +169,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "../Scripts/license_plist.sh\n";
+		};
+		F4916FBB2643A71500D07B94 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 

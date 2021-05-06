@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DEVELOPER_DIR: /Applications/Xcode_12.4.app
+
+jobs:
+  mac:
+    name: macOS
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run tests
+      run: make test
+
+    - name: Cache Swift Package
+      uses: actions/cache@v2
+      with:
+        path: swift-packages
+        key: ${{ runner.os }}-swiftpm-${{ hashFiles('**/iOSTemplate.xcworkspace/xcshareddata/swiftpm/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-swiftpm-

@@ -8,9 +8,9 @@ import SwiftUI
 
 @main
 struct SwiftPMForiOSApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

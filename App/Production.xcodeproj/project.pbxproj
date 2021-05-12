@@ -11,8 +11,8 @@
 		F4916F4F2640076000D07B94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4916F4E2640076000D07B94 /* ContentView.swift */; };
 		F4916F512640076200D07B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4916F502640076200D07B94 /* Assets.xcassets */; };
 		F4916F542640076200D07B94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4916F532640076200D07B94 /* Preview Assets.xcassets */; };
-		F4916F6F2642462500D07B94 /* Sample2 in Frameworks */ = {isa = PBXBuildFile; productRef = F4916F6E2642462500D07B94 /* Sample2 */; };
 		F4916FB92643A23C00D07B94 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F4916FB82643A23C00D07B94 /* Settings.bundle */; };
+		F49FD904264C03BD00A114EE /* Sample1 in Frameworks */ = {isa = PBXBuildFile; productRef = F49FD903264C03BD00A114EE /* Sample1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4916F6F2642462500D07B94 /* Sample2 in Frameworks */,
+				F49FD904264C03BD00A114EE /* Sample1 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			);
 			name = App;
 			packageProductDependencies = (
-				F4916F6E2642462500D07B94 /* Sample2 */,
+				F49FD903264C03BD00A114EE /* Sample1 */,
 			);
 			productName = Production;
 			productReference = F4916F492640076000D07B94 /* App.app */;
@@ -351,9 +351,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F4916F6E2642462500D07B94 /* Sample2 */ = {
+		F49FD903264C03BD00A114EE /* Sample1 */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Sample2;
+			productName = Sample1;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

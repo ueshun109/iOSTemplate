@@ -6,4 +6,5 @@ Template project consisting of SPM and multi project.
 
 # Usage
 You can use it as a base project immediately by changing the workspace name and root directory name.
-And Delete unnecessary SampleA module and SampleB module.
+
+And delete unnecessary SampleA module .

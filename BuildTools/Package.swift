@@ -8,7 +8,7 @@ let package = Package(
   platforms: [.macOS(.v10_14)],
   dependencies: [
     .package(url: "https://github.com/peripheryapp/periphery", from: "2.0.0"),
-    .package(url: "https://github.com/mono0926/LicensePlist", from: "3.0.0"),
+    .package(url: "https://github.com/mono0926/LicensePlist", .exact("3.14.2")),
   ],
   targets: [.target(name: "BuildTools", path: "")]
 )

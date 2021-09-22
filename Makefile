@@ -14,6 +14,5 @@ debug-build:
 		-destination platform="$(PLATFORM_IOS)"
 
 generate-license:
-	cd ../BuildTools
 	SDKROOT=macosx
-	swift run -c release license-plist --package-path Package.swift  --output-path ../App/Settings.bundle
+	swift run -c release --package-path ./BuildTools license-plist --output-path App/Settings.bundle --package-paths ./Package.swift

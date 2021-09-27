@@ -12,7 +12,8 @@
 		F4916F512640076200D07B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4916F502640076200D07B94 /* Assets.xcassets */; };
 		F4916F542640076200D07B94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4916F532640076200D07B94 /* Preview Assets.xcassets */; };
 		F4916FB92643A23C00D07B94 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F4916FB82643A23C00D07B94 /* Settings.bundle */; };
-		F49FD904264C03BD00A114EE /* Sample1 in Frameworks */ = {isa = PBXBuildFile; productRef = F49FD903264C03BD00A114EE /* Sample1 */; };
+		F4A933B526FEC6AD007FE199 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4A933B426FEC6AD007FE199 /* GoogleService-Info.plist */; };
+		F4F41CB226FC413000F8D424 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = F4F41CB126FC413000F8D424 /* AppFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		F4916F532640076200D07B94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4916F552640076200D07B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4916FB82643A23C00D07B94 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		F4A933B426FEC6AD007FE199 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Production/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4A933B926FEC6ED007FE199 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49FD904264C03BD00A114EE /* Sample1 in Frameworks */,
+				F4F41CB226FC413000F8D424 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		F4916F402640076000D07B94 = {
 			isa = PBXGroup;
 			children = (
+				F4A933B926FEC6ED007FE199 /* App.entitlements */,
 				F4916FB82643A23C00D07B94 /* Settings.bundle */,
 				F4916F4B2640076000D07B94 /* iOS */,
 				F4916F4A2640076000D07B94 /* Products */,
@@ -62,6 +66,7 @@
 				F4916F4E2640076000D07B94 /* ContentView.swift */,
 				F4916F502640076200D07B94 /* Assets.xcassets */,
 				F4916F552640076200D07B94 /* Info.plist */,
+				F4A933B426FEC6AD007FE199 /* GoogleService-Info.plist */,
 				F4916F522640076200D07B94 /* Preview Content */,
 			);
 			path = iOS;
@@ -99,7 +104,7 @@
 			);
 			name = App;
 			packageProductDependencies = (
-				F49FD903264C03BD00A114EE /* Sample1 */,
+				F4F41CB126FC413000F8D424 /* AppFeature */,
 			);
 			productName = Production;
 			productReference = F4916F492640076000D07B94 /* App.app */;
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4916F542640076200D07B94 /* Preview Assets.xcassets in Resources */,
+				F4A933B526FEC6AD007FE199 /* GoogleService-Info.plist in Resources */,
 				F4916FB92643A23C00D07B94 /* Settings.bundle in Resources */,
 				F4916F512640076200D07B94 /* Assets.xcassets in Resources */,
 			);
@@ -286,9 +292,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				DISPLAY_NAME = iOSTemlate_Pro;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -309,9 +317,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
+				DISPLAY_NAME = iOSTemlate_Pro;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -351,9 +361,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F49FD903264C03BD00A114EE /* Sample1 */ = {
+		F4F41CB126FC413000F8D424 /* AppFeature */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Sample1;
+			productName = AppFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

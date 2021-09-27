@@ -1,16 +1,14 @@
-//
-//  App.swift
-//
-//  Created by uematsushun on 2021/05/03.
-//
-
+import AppFeature
 import SwiftUI
 
 @main
-struct SwiftPMForiOSApp: App {
+struct TemplateApp: App {
+  private let userNotifications: UserNotificationClient = .live
+
+  @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      AppView(userNotifications: userNotifications)
     }
   }
 }

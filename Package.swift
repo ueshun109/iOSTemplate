@@ -5,17 +5,24 @@ import PackageDescription
 
 let package = Package(
   name: "SamplePackage",
-  platforms: [
-    .iOS(.v14), .watchOS(.v7)
-  ],
+  platforms: [.iOS(.v14)],
   products: [
-    .library(name: "Sample1", targets: ["Sample1"]),
+    .library(name: "AppFeature", targets: ["AppFeature"]),
   ],
   dependencies: [
-    // .package(url: /* package url */, from: "1.0.0"),
+    .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git", from: "8.0.0"),
   ],
   targets: [
-    .target(name: "Sample1", dependencies: []),
-    .testTarget(name: "Sample1Tests", dependencies: ["Sample1"]),
+    .target(
+      name: "AppFeature",
+      dependencies: [
+        "UserNotificationClient",
+        .product(name: "FirebaseAnalytics", package: "Firebase"),
+        .product(name: "FirebaseCrashlytics", package: "Firebase"),
+        .product(name: "FirebaseMessaging", package: "Firebase"),
+      ]
+    ),
+    .testTarget(name: "AppFeatureTest", dependencies: ["AppFeature"]),
+    .target(name: "UserNotificationClient"),
   ]
 )

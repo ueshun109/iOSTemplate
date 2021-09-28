@@ -22,7 +22,7 @@ let package = Package(
         .product(name: "FirebaseMessaging", package: "Firebase"),
       ]
     ),
-    .testTarget(name: "AppFeatureTest", dependencies: ["AppFeature"]),
+    .testTarget(name: "AppFeatureTests", dependencies: ["AppFeature"]),
     .target(name: "UserNotificationClient"),
   ]
 )

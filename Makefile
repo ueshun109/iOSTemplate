@@ -1,11 +1,15 @@
-PLATFORM_IOS = iOS Simulator,name=iPhone 12 Pro,OS=14.4
+PLATFORM_IOS = iOS Simulator,name=iPhone 12,OS=15.0
+
+bundle-install:
+	@bundle config set path '.bundle/'
+	@bundle install
 
 test:
+#	swift package clean
 	@xcodebuild test \
 		-workspace iOSTemplate.xcworkspace \
 		-scheme "App (Staging project)" \
 		-destination platform="$(PLATFORM_IOS)"
-
 
 debug-build:
 	@xcodebuild \

@@ -9,7 +9,9 @@ public struct AppView: View {
   }
 
   public var body: some View {
-    Text("ssss")
+    Button("Crash") {
+      fatalError()
+    }
   }
 }
 
@@ -28,7 +30,6 @@ final class AppViewModel: ObservableObject {
       } receiveValue: { result in
         guard result else { return }
         UIApplication.shared.registerForRemoteNotifications()
-        print("registerd")
       }
       .store(in: &self.cancellables)
   }

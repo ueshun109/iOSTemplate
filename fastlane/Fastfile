@@ -1,0 +1,8 @@
+default_platform :ios
+
+platform :ios do
+desc "Create certificate and provisioning profile."
+  lane :create_certs do
+    match(app_identifier: "com.ueshun.iosTemplate", type: "appstore")
+  end
+end

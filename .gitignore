@@ -28,6 +28,9 @@ com.mono0926.LicensePlist.plist
 # Firebase
 GoogleService-Info.plist
 
+# Bundler
+.bundle
+
 # others
 *.swp
 !.gitkeep

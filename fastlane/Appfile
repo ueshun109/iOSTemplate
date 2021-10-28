@@ -1,0 +1,10 @@
+apple_id "ush109rockdev@gmail.com"
+
+for_platform :ios do
+  for_lane :produce_dev do
+    app_identifier "com.ueshun.template.dev"
+  end
+  for_lane :produce_prod do
+    app_identifier "com.ueshun.template"
+  end
+end

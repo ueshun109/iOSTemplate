@@ -1,8 +1,31 @@
 default_platform :ios
 
 platform :ios do
-desc "Create certificate and provisioning profile."
+  desc "Create certificate and provisioning profile."
   lane :create_certs do
-    match(app_identifier: "com.ueshun.iosTemplate", type: "appstore")
+    match(app_identifier: "com.ueshun.template.dev", type: "appstore")
+  end
+
+  desc "Create app to App Store Connect for development"
+  lane :produce_dev do
+    produce(
+      username: "ush109rockdev@gmail.com",
+      app_name: "iOSTemplate",
+      sku: "202110171300",
+      language: "Japanese"
+    )
+  end
+
+  lane :refresh_dsyms do
+    download_dsyms(
+      app_identifier: "com.ueshun.template.dev",
+      version: "latest"
+    )
+    upload_symbols_to_crashlytics(
+      gsp_path: "./App/iOS/Staging/GoogleService-Info.plist",
+      binary_path: "./Scripts/upload-symbols",
+      dsym_path: "./com.ueshun.template.dev-1.0-0.dSYM.zip"
+    )
+    clean_build_artifacts
   end
 end

@@ -21,6 +21,16 @@ or alternatively using `brew install fastlane`
 fastlane ios create_certs
 ```
 Create certificate and provisioning profile.
+### ios produce_dev
+```
+fastlane ios produce_dev
+```
+Create app to App Store Connect for development
+### ios refresh_dsyms
+```
+fastlane ios refresh_dsyms
+```
+
 
 ----
 
